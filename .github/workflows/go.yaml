@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: |
           go mod tidy
-          go build -o bin -v ./...
+          go build -v ./...
 
       - name: Lint
         uses: golangci/golangci-lint-action@v4
