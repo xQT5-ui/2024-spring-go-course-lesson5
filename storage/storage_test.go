@@ -11,7 +11,6 @@ import (
 )
 
 func Test_LocalDirAndFile(t *testing.T) {
-
 	// prepare tempDir
 	td, err := os.MkdirTemp(os.TempDir(), "test-dir-*")
 	assert.NoError(t, err)

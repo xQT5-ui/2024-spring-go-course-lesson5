@@ -4,7 +4,7 @@
 
 ## Функциональные требования
 
-В [dir_sizer.go](storage%2Fdir_sizer.go) вы видите интерфейс `DirSizer` и структуру `sizer`, которая его реализует. Это и есть ваша программа. 
+В [dir_sizer.go](storage%2Fdir_sizer.go) вы видите интерфейс `DirSizer` и структуру `sizer`, которая его реализует. Это и есть ваша программа.
 
 ```go
 type DirSizer interface {
@@ -17,7 +17,7 @@ type DirSizer interface {
 type sizer struct {
     // maxWorkersCount number of workers for asynchronous run
     maxWorkersCount int
-    
+
     // TODO: add other fields as you wish
 }
 
@@ -25,7 +25,7 @@ type sizer struct {
 
 Вам нужно реализовать функцию `Size(ctx context.Context, d Dir) (Result, error)` в [dir_sizer.go](storage%2Fdir_sizer.go)
 
-Объектное хранилище реализовано в файле [storage.go](storage%2Fstorage.go) 
+Объектное хранилище реализовано в файле [storage.go](storage%2Fstorage.go)
 
 ```go
 // File represent a file object
@@ -49,7 +49,6 @@ type Dir interface {
 
 При необходимости в структуру `sizer` вы можете добавлять дополнительные поля.
 
-
 ## Требования к коду
 
 * использование пакета context;
@@ -58,12 +57,10 @@ type Dir interface {
 * допускается использование пакета golang.org/x/sync;
 * допускается написание собственных тестов.
 
-
 ## Запуск тестов
 
 1. зайти в терминале в каталог homework
 2. вызвать ```go test ./... -v```
-
 
 ## Критерии оценки
 
